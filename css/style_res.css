@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+@media (max-width  :1199px){
+    header .wrap{width: 100%;}
+    #about{height: auto;}
+    #about .wrap{width: 100%;}
+    #circle_bar{width: 100%;}
+    #portfolio .wrap{width: 100%;}
+    #contact .wrap{width: 100%;}
+
+    #contact .wrap form .formlist ul li label{width: 20%; font-size: 16px;}
+    #about{text-align: center;}
+    #about .wrap .process{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #about .wrap .process > div{margin: 30px 0;}
+    #about .wrap .process .language ul{justify-content: center;}
+    #about .wrap .process > div > h4{justify-content: center; padding-bottom: 20px;}
+    #about .wrap .process > .education > p:last-child{
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    #portfolio .wrap .task_part .left_preview .incase{overflow: hidden;}
+}
+
+
+@media (max-width  :767px){
+    #about .wrap{overflow: hidden;}
+    #about .wrap .process .education{width: 100%;}
+    #about .wrap .process .education p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #circle_bar{flex-direction: column;}
+    #circle_bar .vscIcon{width: 100%;}
+    #circle_bar .vscIcon h3{width: 100%;}
+
+    #portfolio .wrap .task_part{width: 100%; margin: 20px 0;}
+    #portfolio .wrap .popup .popdark{width: 90%;}
+    #portfolio .wrap .popup .right_intro{bottom: -120px; width: 100%;}
+    #portfolio .wrap .task_part .right_intro .title{padding-bottom: 20px;}
+    #portfolio .wrap .task_part .right_intro p{padding-bottom: 20px;}
+    #portfolio .wrap .task_part .right_intro ul li{margin: 0 5px 10px;}
+    #portfolio .wrap .popup .right_intro h3{padding-bottom: 20px;}
+    #portfolio .wrap .popup .right_intro p{padding-bottom: 20px;}
+
+    #contact .wrap form .formlist ul li label{width: 30%; font-size: 14px;}
+}
+@media (max-width  :576px){
+    #about .wrap > h3,
+    #about .wrap .myself p{ font-size: 18px;}
+    #about .wrap .myself h3{ font-size: 24px;}
+    #about .wrap .myself h3 span{font-size: 30px;}
+    #about .wrap .myself h3.myname span{font-size: 50px;}
+
+    #portfolio .wrap .task_part .right_intro ul li{font-size: 12px;}
+    #portfolio .wrap .popup .popdark{width: 90%;}
+    #portfolio .wrap .popup .right_intro{bottom: -120px; width: 100%;}
+}

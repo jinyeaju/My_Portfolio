@@ -1,0 +1,624 @@
+@charset "utf-8";
+
+/* google_font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+/* 적용 글씨체 클래스 미리 선언 */
+.mj{font-family: 'Nanum Myeongjo', serif;}
+.gt{font-family: 'Gentium Book Plus', serif;}
+
+
+/* index.html 커버 */
+#Index_cover{
+    width: 100%; height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../img/crescent.jpg);
+    position: relative;
+}
+#Index_cover .wrap{
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#Index_cover .wrap .top_logo{ width: 200px; height: auto; padding-bottom: 100px;}
+#Index_cover .wrap .top_logo a{}
+#Index_cover .wrap .top_logo a img{ display: block; width: 100%;}
+#Index_cover .wrap h2{ font-size: 24px;}
+#Index_cover .wrap p{
+    position: absolute;
+    bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* 공통 header part */
+header{
+    width: 100%; height: 80px;
+    background-color: #000;
+    color: #fff;
+}
+header .wrap{
+    width: 1200px; height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .wrap .logo{}
+header .wrap .logo a{}
+header .wrap .logo a img{
+    display: block;
+    height: 60px;
+}
+header .wrap .menu{}
+header .wrap .menu ul{display: flex; flex-wrap: wrap;}
+header .wrap .menu ul li{margin: 0 10px;}
+header .wrap .menu ul li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+
+/* gitDeco part */
+#gitDeco{}
+#gitDeco:hover{}
+#gitDeco .wrap{
+    position: fixed;
+    right: -10px; top: 20%;
+}
+#gitDeco .wrap h3{
+    font-size: 16px;
+    font-weight: lighter;
+    margin-left: -100px;
+    text-transform: capitalize;
+}
+#gitDeco .wrap a{}
+#gitDeco .wrap a img{
+    position: absolute;
+    bottom: -100px; right: -15px;
+    display: block;
+    width: 80px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#gitDeco .wrap:hover a img{
+    right: 10px;
+    transform: rotate(-20deg);
+}
+
+
+
+/* #about part */
+#about{
+    width: 100%; 
+    height: auto;
+}
+#about .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    /* background-color: #ffd; */
+    padding: 100px 10px 126px;
+    color: #666;
+}
+#about .wrap .myself{ text-align: center; padding-bottom: 80px;}
+#about .wrap .myself p{
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 40px;
+}
+#about .wrap .myself h3{
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 60px;
+}
+#about .wrap .myself h3 span{font-size: 40px; color: #333; position: relative;}
+#about .wrap .myself h3.myname span{font-size: 50px;}
+#about .wrap .myself h3.myname span:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px; left: 0;
+    width: 100%; height: 6px;
+    background-color: #f5df4d;    
+}
+
+#about .wrap > h3{
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+#about .wrap .process{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#about .wrap .process > div > h4{
+    width: 100%;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+}
+#about .wrap .process > div > h4 > div.emptyBox{
+    width: 80px; height: 20px;
+    margin: 0 10px;
+    background: transparent;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+#about .wrap .process > div > p{
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+#about .wrap .process .education{}
+#about .wrap .process .education h4{}
+#about .wrap .process .education p{}
+#about .wrap .process .language{}
+#about .wrap .process .language h4{}
+#about .wrap .process .language p{}
+#about .wrap .process .language ul{display: flex; flex-wrap: wrap;}
+#about .wrap .process .language ul li{
+    font-size: 24px;
+    line-height: 20px;
+    margin: 0 10px;
+}
+
+
+/* /skill part */
+
+#circle_bar{
+    width: 1200px; height: auto;
+    margin: 0 auto;
+    padding: 124px 0;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#circle_bar .vscIcon{
+    width: 30%;
+    padding: 0 10px 40px;
+}
+#circle_bar .vscIcon h3{
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 0;
+}
+#circle_bar .vscIcon img{
+    display: block;
+    height: 60px;
+    margin: 0 auto;
+}
+#circle_bar .frame{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#circle_bar .frame h3{
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 30px 0 50px;
+}
+#circle_bar .frame .box{
+    width: 210px; height: 210px;
+    margin-bottom: 20px;
+    /* background: #fcc; */
+    position: relative;
+    transition: transform 0.5s;
+}
+#circle_bar .frame .box:hover{
+    transform: translateY(-7.5%);
+}
+#circle_bar .frame .box .cont{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+#circle_bar .frame .box .cont .top{
+    position: relative;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.5);
+}
+#circle_bar .frame .box .cont .top .num{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+#circle_bar .frame .box .cont .top .num h2{ font-size: 15px; color: #777;}
+#circle_bar .frame .box .cont .top .num h2 .count{ font-size: 24px; color: #555;}
+#circle_bar .frame .box .cont .bottom{
+    padding-top: 10px;
+    color: #555;
+    text-align: center;
+    font-size: 15px;
+}
+#circle_bar .frame .box .cont .bottom{}
+
+#circle_bar .frame .box .cont .top svg{
+    position: relative;
+    width: 150px; height: 150px;
+    z-index: 8;
+}
+#circle_bar .frame .box .cont .top svg circle{
+    width: 100%; height: 100%;
+    fill: none; 
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+}
+#circle_bar .frame .box .cont .top svg circle:last-child{
+    stroke-linecap: butt; /*스트로크의 끝부분 처리 butt, round, project*/
+    /* 원 호를 구하기 2 * PI * R = 2 * 70 * 3.14 = 439.6 ~= 440 */
+    stroke-dasharray: 440; /*호를 1px씩 쪼개고 440칸 할당*/
+    stroke-dashoffset: 440; /*원의 0도부터 시계방향으로 이동한 거리*/
+    stroke: #f5df4d;
+    transition: stroke-dashoffset 2s linear;
+}
+
+
+
+/* /portfolio part */
+#portfolio{
+    width: 100%; 
+}
+#portfolio .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: #ccd; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 100px 0;
+    color: #333;
+}
+#portfolio .wrap .task_part{
+    width: calc(50% - 20px);
+    margin: 0 10px 30px;
+    /* background-color: #faa; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+#portfolio .wrap .task_part:hover{box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);}
+#portfolio .wrap .task_part .left_preview{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#portfolio .wrap .task_part .left_preview .left_wrap{
+    background-color: #fff;
+    position: relative;
+}
+#portfolio .wrap .task_part .left_preview .left_wrap img{
+    display: block;
+    width: 100%;
+}
+#portfolio .wrap .task_part .left_preview .left_wrap .incase{
+    position: absolute;
+    top: 5.33%; left: 12.63%;
+    width: 74.62%;
+    height: 79.47%;
+    /* background-color: #aff; */
+    overflow: hidden;
+}
+#portfolio .wrap .task_part .left_preview .left_wrap .incase .portview{
+    width: 100%; height: 100%;
+    background-image: url(../img/capture_image/audition_vue.png);
+    background-size: 100% auto;
+    background-position: center 0;
+    transition: background-position 20s linear;
+}
+#portfolio .wrap .task_part:hover .left_preview .left_wrap .incase .portview{
+    background-position: center 100%;
+}
+
+
+#portfolio .wrap .task_part .right_intro{
+    width: 50%; 
+    padding: 10px;
+    /* background-color: #456; */
+}
+#portfolio .wrap .task_part .right_intro .title{
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+#portfolio .wrap .task_part .right_intro .concept{}
+#portfolio .wrap .task_part .right_intro .language{}
+#portfolio .wrap .task_part .right_intro h3{}
+#portfolio .wrap .task_part .right_intro p{
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#portfolio .wrap .task_part .right_intro ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#portfolio .wrap .task_part .right_intro ul li{
+    text-align: center;
+    font-size: 14px;
+    margin: 0 5px 10px;
+}
+#portfolio .wrap .task_part .right_intro a{
+    display: block;
+    width: 100px;
+    line-height: 28px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: background-color 0.5s, color 0.5s;
+}
+#portfolio .wrap .task_part .right_intro a:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+#portfolio .wrap .popup{
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.75); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+#portfolio .wrap .popup.active{
+    opacity: 1;
+    z-index: 1;
+}
+#portfolio .wrap .popup .popdark{
+    width: 60%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#portfolio .wrap .popup .popdark img{
+    display: block; width: 100%;;
+    /* z-index: 10; */
+}
+#portfolio .wrap .popup .popdark .popcase{
+    position: absolute;
+    top: 5.33%; left: 12.63%;
+    width: 74.62%;
+    height: 79.47%;
+    /* background-color: #aff; */
+    overflow: hidden;
+}
+#portfolio .wrap .popup .popdark .popcase .popview{
+    width: 100%; height: 100%;
+    background-image: url(../img/capture_image/audition_vue.png);
+    background-size: 100% auto;
+    background-position: center 0;
+    transition: background-position 20s linear;
+}
+#portfolio .wrap .popup .popdark .popcase:hover .popview{
+    background-position: center 100%;
+}
+#portfolio .wrap .popup .right_intro{
+    position: absolute;
+    bottom: -90px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+#portfolio .wrap .popup .right_intro h3{
+    padding-bottom: 10px;
+}
+#portfolio .wrap .popup .right_intro p{ padding-bottom: 10px;}
+#portfolio .wrap .popup .right_intro a{
+    display: block;
+    width: 140px;
+    line-height: 28px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: background-color 0.5s, color 0.5s;
+}
+#portfolio .wrap .popup .right_intro a:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+#portfolio .wrap .popup .popdark .popClose{
+}
+#portfolio .wrap .popup .popdark .popClose button{
+    position: absolute;
+    top: -50px; right: 20px; 
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* /contact part */
+#contact{}
+#contact .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: #ffd; */
+    text-align: center;
+    padding: 50px 10px 46px;
+    color: #333;
+}
+#contact .wrap h2{
+    font-size: 24px;
+    line-height: 40px;
+    padding-bottom: 30px;
+}
+#contact .wrap h2 span{font-size: 16px; color: #f5584d; line-height: 40px;}
+#contact .wrap form{
+    width: 100%;
+}
+#contact .wrap form .formlist{width: 100%;}
+#contact .wrap form .formlist ul{width: 100%;}
+#contact .wrap form .formlist ul li{
+    margin: 20px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .wrap form .formlist ul li label{
+    width: 30%;
+    font-size: 18px;
+    line-height: 40px;
+}
+#contact .wrap form .formlist ul li label sup{ color: #f5584d;}
+#contact .wrap form .formlist ul li .inputbox{
+    width: 70%;
+    font-size: 18px;
+    line-height: 40px;
+}
+#contact .wrap form .formlist ul li .inputbox input{
+    width: 100%; height: 40px;
+    outline-color: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+#contact .wrap form .formlist ul li .inputbox textarea{
+    width: 100%; height: 400px;
+    outline: none;
+}
+#contact .wrap form .formlist .btn_box{}
+#contact .wrap form .formlist .btn_box button{
+    padding: 10px 30px;
+    border: 1px solid #333;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.5s, color 0.5s;
+}
+#contact .wrap form .formlist .btn_box button:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+#contact .wrap form .thankyou_message{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+#contact .wrap form .thankyou_message article{
+    position: absolute;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+#contact .wrap form .thankyou_message article h1{
+    color: #555;
+    font-size: 20px;
+    padding-bottom: 20px;
+    word-break: keep-all;
+}
+#contact .wrap form .thankyou_message article p{
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid #ccc; */
+}
+#contact .wrap form .thankyou_message article .btn_box{
+    text-align: right;
+}
+#contact .wrap form .thankyou_message article .btn_box a{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #333;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.5s, color 0.5s;
+}
+#contact .wrap form .thankyou_message article .btn_box a:hover{ 
+    background-color: #333;
+    color: #fff;
+}
+#contact .wrap .comment{
+    font-size: 14px;
+    color: #f5584d;
+    display: block;
+    padding-top: 10px;
+    text-align: right;
+}
+
+
+
+
+/* 공통 footer part */
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+}
+footer p{
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+}
